@@ -1,39 +1,30 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import logoConf from "../images/logo-conf.svg";
+import astronautas from "../images/astronautas.svg";
+import "./styles/Home.css";
 
-import './styles/Home.css';
-import platziconfLogoImage from '../images/platziconf-logo.svg';
-import astronautsImage from '../images/astronauts.svg';
-
-export default class Home extends Component {
+class Home extends React.Component {
   render() {
     return (
-      <div className="Home">
-        <div className="container">
-          <div className="row">
-            <div className="Home__col col-12 col-md-4">
-              <img
-                src={platziconfLogoImage}
-                alt="Platzi Conf Logo"
-                className="img-fluid mb-2"
-              />
+      <React.Fragment>
+        <div className="container_home">
+          <div className="home_info text-light">
+            <img className="img-fluid" src={logoConf} alt="Logo" />
+            <h1>PRINT YOUR BADGES</h1>
+            <h5>The easiest way to manage your conference</h5>
+            <Link to="/badges" className="btn btn-primary">
+              Start now
+            </Link>
+          </div>
 
-              <h1>Badge Management System</h1>
-              <Link className="btn btn-primary" to="/badges">
-                Start
-              </Link>
-            </div>
-
-            <div className="Home__col d-none d-md-block col-md-8">
-              <img
-                src={astronautsImage}
-                alt="Astronauts"
-                className="img-fluid p-4"
-              />
-            </div>
+          <div className="home_image">
+            <img className="img-fluid" src={astronautas} alt="Logo" />
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
+
+export default Home;

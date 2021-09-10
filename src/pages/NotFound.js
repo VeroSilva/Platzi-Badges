@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function NotFound() {
-  return <h1>404: Not Found</h1>;
+function NotFound(params) {
+  return <h1>404: not found</h1>;
 }
 
 export default NotFound;
